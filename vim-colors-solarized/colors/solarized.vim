@@ -368,8 +368,9 @@ endif
 "}}}
 " Background value based on termtrans setting "{{{
 " ---------------------------------------------------------------------
-if (has("gui_running") || g:solarized_termtrans == 0)
-    let s:back        = s:base03
+" if (has("gui_running") || g:solarized_termtrans == 0)
+if (has("gui_running"))
+    let s:back        = "Black"
 else
     let s:back        = "NONE"
 endif
