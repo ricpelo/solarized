@@ -403,7 +403,11 @@ if g:solarized_contrast == "high"
     let s:base1       = s:base2
     let s:base2       = s:base3
     if has("gui_running")
-        let s:back    = "Black"
+        if &background == "light"
+            let s:back = s:base03
+        else
+            let s:back = "Black"
+        endif
     else
         let s:back    = "NONE"
     endif
